@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/update" method="POST">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" value="{{context.name}}">
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" class="form-control" placeholder="Enter age" id="age" name="age" value="{{context.age}}">
+  </div>
+  <input type="hidden" value="{{ context.id }}" name="id">
+  <div class="text-center">
+    <button type="submit" class="btn btn-warning">Update</button>
+  </div>
+  
+</form>
+
+{% endblock %}

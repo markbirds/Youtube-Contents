@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for i in context %}
+    <tr>
+      <td>{{ i.name }}</td>
+      <td>{{ i.age }}</td>
+      <td><a href="delete/{{i.id}}" class="btn btn-danger" role="button">Delete</a></td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

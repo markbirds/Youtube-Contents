@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for i in context %}
+    <tr>
+      <td>{{ i.name }}</td>
+      <td>{{ i.age }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
